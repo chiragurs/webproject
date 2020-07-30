@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <title>Login</title>
+    <link href="main.css" rel="stylesheet">
+    <script>
+        function valid(){
+            var user= document.getElementById("em");
+            if(user.value.trim()==""){
+                alert("Mail-id should not be empty");
+                return false;
+            }
+            var pass= document.getElementById("pw").value;
+            var reg = /^(?=.*[0-9])(?=.*[!@$%^&*])[a-zA-Z0-9!@$%^&*]{5,10}$/;
+            if (!pass.match(reg)){
+                alert("5 to 10 charcters should include number alphabets and special characters ")
+                return false;
+            }
+        }
+    
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    <div class="text-container">
+        <h1>Sign In</h1>
+        <form action="genere.html" onsubmit="return valid()">
+        <input type="email" placeholder="Enter your email" id = "em"><br><br>
+        <input type="password" placeholder="Enter your password" id = "pw"><br><br>
+        <a href="">Forgot password?</a><br><br><br>
+        <input type="submit">
+        </form>
+    </div>
+</body>
